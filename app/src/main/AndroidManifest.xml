@@ -20,7 +20,9 @@
         <activity android:name=".CreateAccount" />
         <activity android:name=".FilterRes" />
         <activity android:name=".ListingPage" />
-        <activity android:name=".UserAccount"></activity>
+        <activity android:name=".UserAccount" />
+        <activity android:name=".ViewMessages" />
+        <activity android:name=".EditInfo"></activity>
     </application>
 
 </manifest>

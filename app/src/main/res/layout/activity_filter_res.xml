@@ -6,4 +6,168 @@
     android:layout_height="match_parent"
     tools:context=".FilterRes">
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="240dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/filter_resaults"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/priceFrom"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/cLeasure"
+        app:layout_constraintEnd_toStartOf="@+id/priceTo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <EditText
+        android:id="@+id/priceTo"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/cLifestyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/priceFrom"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="319dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/price_range"
+        app:layout_constraintBottom_toTopOf="@+id/priceFrom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <ToggleButton
+        android:id="@+id/cLeasure"
+        style="@android:style/Widget.Button.Toggle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/leasure"
+        android:textOff="@string/leasure"
+        android:textOn="@string/leasure"
+        app:layout_constraintBottom_toTopOf="@+id/cActive"
+        app:layout_constraintEnd_toStartOf="@+id/cLifestyle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/priceFrom" />
+
+    <ToggleButton
+        android:id="@+id/cLifestyle"
+        style="@android:style/Widget.Button.Toggle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/lifestyle"
+        android:textOff="@string/lifestyle"
+        android:textOn="@string/lifestyle"
+        app:layout_constraintBottom_toTopOf="@+id/cFood"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cLeasure"
+        app:layout_constraintTop_toBottomOf="@+id/priceTo" />
+
+    <ToggleButton
+        android:id="@+id/cActive"
+        style="@android:style/Widget.Button.Toggle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/active"
+        android:textOff="@string/active"
+        android:textOn="@string/active"
+        app:layout_constraintBottom_toTopOf="@+id/cGroup"
+        app:layout_constraintEnd_toStartOf="@+id/cFood"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cLeasure" />
+
+    <ToggleButton
+        android:id="@+id/cFood"
+        style="@android:style/Widget.Button.Toggle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/food_drink"
+        android:textOff="@string/food_drink"
+        android:textOn="@string/food_drink"
+        app:layout_constraintBottom_toTopOf="@+id/bFilter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cActive"
+        app:layout_constraintTop_toBottomOf="@+id/cLifestyle" />
+
+    <ToggleButton
+        android:id="@+id/cGroup"
+        style="@android:style/Widget.Button.Toggle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/group"
+        android:textOff="@string/group"
+        android:textOn="@string/group"
+        app:layout_constraintEnd_toStartOf="@+id/bFilter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cActive" />
+
+    <Button
+        android:id="@+id/bFilter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/filter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cGroup"
+        app:layout_constraintTop_toBottomOf="@+id/cFood" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="18dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/pound"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+
 </android.support.constraint.ConstraintLayout>

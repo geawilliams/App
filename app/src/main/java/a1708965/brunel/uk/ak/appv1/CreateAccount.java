@@ -13,7 +13,7 @@ public class CreateAccount extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_account);
         final Button creAcc = findViewById(R.id.signUp);
-        final Button back = findViewById(R.id.back);
+        final Button back = findViewById(R.id.backBtn);
 
         creAcc.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

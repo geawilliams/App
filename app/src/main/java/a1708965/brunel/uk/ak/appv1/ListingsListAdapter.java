@@ -8,14 +8,14 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class CustListAdapt extends ArrayAdapter {
+public class ListingsListAdapter extends ArrayAdapter {
 
     private final Activity context;
     private final Integer[] imageIDarray;
     private final String[] nameArray;
     private final String[] infoArray;
 
-    public CustListAdapt(Activity context, String[] nameArrayParam, String[] infoArrayParam, Integer[] imageArrayParam){
+    public ListingsListAdapter(Activity context, String[] nameArrayParam, String[] infoArrayParam, Integer[] imageArrayParam){
         super(context, R.layout.product_list_row, nameArrayParam);
         this.context= context;
         this.imageIDarray = imageArrayParam;

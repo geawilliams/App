@@ -1,6 +1,7 @@
 package a1708965.brunel.uk.ak.appv1;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,15 +12,15 @@ import android.widget.ListView;
 
 public class User extends AppCompatActivity {
     ListView listView;
-    String[] nameArray = {"Octopus","Pig","Sheep","Rabbit","Snake","Spider" };
+    String[] nameArray = {"Listing","Listing","Listing","Listing","Listing","Listing" };
 
     String[] infoArray = {
-            "8 tentacled monster",
-            "Delicious in rolls",
-            "Great for jumpers",
-            "Nice in a stew",
-            "Great for shoes",
-            "Scary."
+            "Listing info",
+            "Listing info",
+            "Listing info",
+            "Listing info",
+            "Listing info",
+            "Listing info"
     };
 
     Integer[] imageArray = {R.drawable.ic_launcher_foreground,
@@ -32,7 +33,11 @@ public class User extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user);
+        defButtons();
+    }
 
+
+    private void defButtons(){
         final ImageButton filter = findViewById(R.id.filterID);
         filter.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
@@ -49,7 +54,7 @@ public class User extends AppCompatActivity {
             }
         });
 
-        CustListAdapt adapter = new CustListAdapt(this, nameArray, infoArray, imageArray);
+        ListingsListAdapter adapter = new ListingsListAdapter(this, nameArray, infoArray, imageArray);
         listView = (ListView)findViewById(R.id.listViewID);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -57,7 +62,7 @@ public class User extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(User.this, ListingPage.class);
                 String message = nameArray[position];
-                intent.putExtra("animal", message);
+                intent.putExtra("message", message);
                 startActivity(intent);
             }
         });

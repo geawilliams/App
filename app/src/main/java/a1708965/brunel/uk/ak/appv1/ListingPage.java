@@ -10,7 +10,7 @@ public class ListingPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listing_page);
-        String savedExtra = getIntent().getStringExtra("animal");
+        String savedExtra = getIntent().getStringExtra("message");
         TextView myText = (TextView) findViewById(R.id.productTitle);
         myText.setText(savedExtra);
     }

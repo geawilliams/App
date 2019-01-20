@@ -1,6 +1,7 @@
 package a1708965.brunel.uk.ak.appv1;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -19,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         final Button login = findViewById(R.id.button);
         final Button creAcc = findViewById(R.id.button2);
-
+        storeInfo();
 
 
 
@@ -50,6 +51,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+    private void storeInfo(){
+        SharedPreferences sp = getSharedPreferences("login", MODE_PRIVATE);
+        sp.edit().putInt("UserID", 1).apply();
+        sp.edit().putString("Name", "George Williams").apply();
+        sp.edit().putString("Email", "1708965@brunel.ac.uk").apply();
+        sp.edit().putString("DOB", "24/11/1998").apply();
+        sp.edit().putString("Number", "07500142292").apply();
     }
 
 }
