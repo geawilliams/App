@@ -6,18 +6,35 @@
     android:layout_height="match_parent"
     tools:context=".User">
 
+    <ListView
+        android:id="@+id/listViewID"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@android:color/background_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+
+    </ListView>
+
     <RelativeLayout
         android:id="@+id/relativeLayout"
         android:layout_width="0dp"
-        android:layout_height="63dp"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="@android:color/background_light">
 
         <ImageButton
             android:id="@+id/filterID"
-            android:layout_width="64dp"
-            android:layout_height="match_parent"
+            android:layout_width="56dp"
+            android:layout_height="45dp"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="13dp"
             android:background="@android:color/background_light"
@@ -26,25 +43,11 @@
         <Button
             android:id="@+id/account"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_marginStart="8dp"
             android:text="Account" />
 
     </RelativeLayout>
-
-    <ListView
-        android:id="@+id/listViewID"
-        android:layout_width="395dp"
-        android:layout_height="542dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" >
-
-    </ListView>
 
 </android.support.constraint.ConstraintLayout>

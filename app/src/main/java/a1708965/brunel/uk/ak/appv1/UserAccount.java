@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ListView;
 import android.widget.TextView;
 
 public class UserAccount extends AppCompatActivity {
@@ -33,6 +34,16 @@ public class UserAccount extends AppCompatActivity {
         dob.setText(sp.getString("DOB",""));
     }
     private void defButton(){
+        Button gtbookings = (Button)findViewById(R.id.gtBooking);
+        gtbookings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(UserAccount.this, Bookings.class);
+                startActivity(i);
+            }
+        });
+
+
         ImageButton back = (ImageButton)findViewById(R.id.backBtn);
         back.setOnClickListener(new View.OnClickListener() {
             @Override

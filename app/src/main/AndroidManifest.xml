@@ -22,7 +22,8 @@
         <activity android:name=".ListingPage" />
         <activity android:name=".UserAccount" />
         <activity android:name=".ViewMessages" />
-        <activity android:name=".EditInfo"></activity>
+        <activity android:name=".EditInfo" />
+        <activity android:name=".Bookings"></activity>
     </application>
 
 </manifest>

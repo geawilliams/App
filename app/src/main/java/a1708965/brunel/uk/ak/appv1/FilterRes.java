@@ -18,7 +18,7 @@ public class FilterRes extends AppCompatActivity {
     }
 
     private void defButtons(){
-        Button filter = (Button)findViewById(R.id.bFilter);
+        Button filter = findViewById(R.id.bFilter);
         filter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -27,59 +27,39 @@ public class FilterRes extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        ToggleButton leasure = (ToggleButton)findViewById(R.id.cLeasure);
+        ToggleButton leasure = findViewById(R.id.cLeasure);
         leasure.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(filters[0]){
-                    filters[0] = false;
-                }else{
-                    filters[0] = true;
-                }
+                filters[0] = !filters[0];
             }
         });
-        ToggleButton lifestyle = (ToggleButton)findViewById(R.id.cLifestyle);
+        ToggleButton lifestyle = findViewById(R.id.cLifestyle);
         lifestyle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(filters[1]){
-                    filters[1] = false;
-                }else{
-                    filters[1] = true;
-                }
+                filters[1] = !filters[1];
             }
         });
-        ToggleButton active = (ToggleButton)findViewById(R.id.cActive);
+        ToggleButton active = findViewById(R.id.cActive);
         active.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(filters[2]){
-                    filters[2] = false;
-                }else{
-                    filters[2] = true;
-                }
+                filters[2] = !filters[2];
             }
         });
-        ToggleButton foodandd = (ToggleButton)findViewById(R.id.cFood);
+        ToggleButton foodandd = findViewById(R.id.cFood);
         foodandd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(filters[3]){
-                    filters[3] = false;
-                }else{
-                    filters[3] = true;
-                }
+                filters[3] = !filters[3];
             }
         });
-        ToggleButton group = (ToggleButton)findViewById(R.id.cGroup);
+        ToggleButton group = findViewById(R.id.cGroup);
         group.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(filters[4]){
-                    filters[4] = false;
-                }else{
-                    filters[4] = true;
-                }
+                filters[4] = !filters[4];
             }
         });
     }
